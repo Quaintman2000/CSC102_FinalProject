@@ -1,2 +1,5 @@
-﻿  Source.cpp
+﻿  StoryFunctions.cpp
+C:\Users\agcga\source\repos\CSC102_Final\CSC102_Final\StoryFunctions.cpp(18,9): warning C4129: '_': unrecognized character escape sequence
+C:\Users\agcga\source\repos\CSC102_Final\CSC102_Final\StoryFunctions.cpp(77,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\agcga\source\repos\CSC102_Final\CSC102_Final\StoryFunctions.cpp(296): warning C4715: 'DetermineAction': not all control paths return a value
   CSC102_Final.vcxproj -> C:\Users\agcga\source\repos\CSC102_Final\Debug\CSC102_Final.exe

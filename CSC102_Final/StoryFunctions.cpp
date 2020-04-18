@@ -9,8 +9,17 @@ using namespace std;
 
 void Introduction()
 {
+	//title
+	cout << "  _____                                        ____                  _   " << endl;
+	cout <<" |  __ \\                                      / __ \\                | |  " << endl;
+	cout <<" | |  | |_   _ _ __   __ _  ___  ___  _ __   | |  | |_   _  ___  ___| |_ " << endl;
+	cout <<" | |  | | | | | '_ \\ / _` |/ _ \\/ _ \\| '_ \\  | |  | | | | |/ _ \\/ __| __|" << endl;
+	cout <<" | |__| | |_| | | | | (_| |  __/ (_) | | | | | |__| | |_| |  __/\\__ \\ |_ " << endl;
+	cout <<" |_____/ \\__,_|_| |_|\\__, |\\___|\\___/|_| |_|  \\___\\_\\\__,_|\\___||___/\\__|" << endl;
+	cout <<"                      __/ |                                              " << endl;
+	cout <<"                     |___/                                               " << endl;
 	//intro
-	cout << "Welcome to Dungeon Quest!\n";
+	cout << "\n\nWelcome to Dungeon Quest!\n";
 	cout << "An exciting adventure game where you explore a mysterious dungeon in search of gold and glory!\n";
 }
 
@@ -30,16 +39,16 @@ string StoryGetClass()
 	//ask for desired class
 	string answer;
 	cout << "\nPlease enter the corresponding number for your class you will like to play as for your adventure.\n";
-	cout << "Noble Knight or Keen Rouge\n";
+	cout << "Noble Knight or Keen ROGUE\n";
 	//gets input
 	answer = GetUserInput();
 	//checks if input is valid
-	if (answer != "NOBLE KNIGHT" && answer != "KEEN ROUGE" && answer != "KNIGHT" && answer != "ROUGE")
+	if (answer != "NOBLE KNIGHT" && answer != "KEEN ROGUE" && answer != "KNIGHT" && answer != "ROGUE")
 	{
-		while (answer != "NOBLE KNIGHT" && answer != "KEEN ROUGE" && answer != "KNIGHT" && answer != "ROUGE")
+		while (answer != "NOBLE KNIGHT" && answer != "KEEN ROGUE" && answer != "KNIGHT" && answer != "ROGUE")
 		{
 			cout << "invalid input. Please try again.\n";
-			cout << "Noble Knight or Keen Rouge\n";
+			cout << "Noble Knight or Keen ROGUE\n";
 			//gets input
 			answer = GetUserInput();
 		}
@@ -49,9 +58,9 @@ string StoryGetClass()
 	{
 		answer = "NOBLE KNIGHT";
 	}
-	else if (answer == "ROUGE")
+	else if (answer == "ROGUE")
 	{
-		answer = "KEEN ROUGE";
+		answer = "KEEN ROGUE";
 	}
 
 	//return their answer
@@ -98,7 +107,7 @@ string DetermineAction(string& playerClass, int& sceneNum, string& playerAnswer,
 		if (playerAnswer == "YES")
 		{
 			//return what to say
-			stuffToSay += "You enter the dungeon but you were immiediately introduced to a giant spider!\n";
+			stuffToSay += "You enter the dungeon but you were immediately introduced to a giant spider!\n";
 			stuffToSay += "\t The spider charges at you! What will you do?\n";
 			stuffToSay += "\t Attack, Block, or Dodge?\n";
 
@@ -118,7 +127,7 @@ string DetermineAction(string& playerClass, int& sceneNum, string& playerAnswer,
 		{
 			//return what to say
 			stuffToSay += "As you sat there and did nothing, a poisonous snake comes by and bites your leg.\n";
-			stuffToSay += "\t You keel over and die from the poison...\n\n";
+			stuffToSay += "\t You kneel over and die from the poison...\n\n";
 			stuffToSay += "\t Game over... Hint: try putting in a valid input next time!\n";
 
 			//set alive status to false
@@ -157,7 +166,7 @@ string DetermineAction(string& playerClass, int& sceneNum, string& playerAnswer,
 
 				return stuffToSay;
 			}
-			//if the player is the rouge
+			//if the player is the ROGUE
 			else
 			{
 				//return what to say
@@ -186,7 +195,7 @@ string DetermineAction(string& playerClass, int& sceneNum, string& playerAnswer,
 
 				return stuffToSay;
 			}
-			//if the player is the rouge
+			//if the player is the ROGUE
 			else
 			{
 				//return what to say
@@ -231,7 +240,7 @@ string DetermineAction(string& playerClass, int& sceneNum, string& playerAnswer,
 
 				return stuffToSay;
 			}
-			//if the player is a rouge
+			//if the player is a ROGUE
 			else
 			{
 				//return stuff to say for the narrator
@@ -253,11 +262,11 @@ string DetermineAction(string& playerClass, int& sceneNum, string& playerAnswer,
 				stuffToSay += "\t It pierces the oger's heart and it dies.\n\n";
 				stuffToSay += "\t You grab as much gold as you can carry and walk back out of the dungeon to live the rest of your days in riches!\n";
 				stuffToSay += "\t As the world hear's your story, you earn the title: " + *playerName + " the oger slayer!\n";
-				stuffToSay += "\t You win! Try playing as the rouge next time!\n";
+				stuffToSay += "\t You win! Try playing as the ROGUE next time!\n";
 
 				return stuffToSay;
 			}
-			//if the player is a rouge
+			//if the player is a ROGUE
 			else
 			{
 				//return stuff to say for the narrator
