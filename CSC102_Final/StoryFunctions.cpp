@@ -120,6 +120,9 @@ string DetermineAction(string& playerClass, int& sceneNum, string& playerAnswer,
 			stuffToSay += "You decide its not worth it so you take your leave but, a gaint boulder falls out of no where and smashes you.\n\n";
 			stuffToSay += "\t Game over...\n *cough* *cough* Just go inside you pussy! *cough* *cough*\n";
 
+			//set alive status
+			alive = false;
+
 			return stuffToSay;
 		}
 		//if the player types in an invalid input
